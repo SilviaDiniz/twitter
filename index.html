@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width'>
+    <title>Twitter</title>
+    <link href='css/main.css' rel='stylesheet' type='text/css' />
+    <!-- LINK ICONES-->
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' crossorigin='anonymous'>
+  </head>
+  <body>
+    <!--  HEADER NAVEGAÇAO  -->
+    <div class='banner'>
+      <h1 class='twitter'><i class='logo fab fa-twitter'></i>TWITTER</h1>
+    </div>
+    <!-- CONTENT -->
+    <div class='content'>
+      <div class='container'>
+        <section class='box'>
+          <h2 class='title'>Desafio de Código</h2>
+          <p class='text'>Olá,</p>
+          <p class='text'>sou front-end developer jr.</p>
+          <hr>
+          <h3 class='sub-title'>CÓDIGO</h3>
+        </section>
+        <!-- FORMULARIO -->
+        <section class='box'>
+          <form class='form-twitter'>
+            <textarea onKeyUp='counter(this)' placeholder=" No que você esta pensando hoje?"></textarea>
+            <input type='submit' value="TWITTAR" class='button-form' desabled />
+          </form>
+          <hr>
+          <p id='count-char'>140</p>
+        </section>
+      </div>
+      <!-- EXIBE TEXTO TWITADO -->
+      <div class='post-twitted'>
+      </div>
+  </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
