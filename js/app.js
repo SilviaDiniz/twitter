@@ -1,15 +1,15 @@
 var postTwitter = document.querySelector('textarea');
 
-postTwitter.addEventListener('keydown', autosize);
+postTwitter.addEventListener('keydown', autoSize);
 postTwitter.addEventListener('keydown', myBtn);
 postTwitter.addEventListener('keypress', myBtn);
 postTwitter.addEventListener('keyup', myBtn);
 
 /* AUTO RECIZE */
-function autosize(){
+function autoSize() {
   var size = this;
   setTimeout(function(){
-    size.style = 'height:auto; padding:0';
+    size.style = 'min-height: 60px, height: auto; padding: 0';
     size.style = 'height:' + size.scrollHeight + 'px';
   },0);
 }
@@ -26,18 +26,21 @@ var now = (new Date().getHours() + ':' + new Date().getMinutes());
 submit.onclick = function(event) {
   var container = document.getElementsByClassName('post-twitted')[0];
 
-  var novaDiv = document.createElement('div');
+  var section = document.createElement('div');
   var dateNow = document.createElement('small');
+  var post = document.createElement('p');
 
-  novaDiv.textContent = postTwitter.value;
   dateNow.textContent = now;
+  post.textContent = postTwitter.value;
 
-  novaDiv.className = 'twitted';
+  section.className = 'twitted';
   dateNow.className = 'date';
+  post.className = 'text';
 
-  container.prepend(novaDiv);
-  novaDiv.appendChild(dateNow);
-  container.appendChild(novaDiv);
+  container.prepend(section);
+  container.appendChild(section);
+  section.appendChild(dateNow);
+  section.appendChild(post);
 
   container.style.visibility = 'visible';
   submit.disabled = true;
@@ -49,7 +52,7 @@ submit.onclick = function(event) {
 }
 
 /* CONTADOR */
-function counter(campo){
+function counter(campo) {
   var countChar = 140;
   var rest = document.getElementById('count-char').innerText = countChar-campo.value.length;
   if(rest >= 120 && rest < 140) {
