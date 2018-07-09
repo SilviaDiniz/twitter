@@ -107,9 +107,8 @@ p.text{
 }
 
 hr{
-  display: flex;
   margin: 5px 0;
-  width: auto;
+  width: 100%;
   border-top: solid 1px #DCDCDC;
 }
 
@@ -120,6 +119,10 @@ h3.sub-title{
 }
 
 /* FORMULARIO */
+.twitter-txt{
+  display:table;
+}
+
 .form-twitter{
   width: 100%;
   background-color: white;
@@ -161,10 +164,10 @@ textarea{
 }
 
 /* CONTAINER TEXTO TEXTEAREA */
-.post-twitted{
+.box-twitted{
   display: flex;
   flex-direction: column;
-  margin: -10em 70px 0px 70px;
+  margin: 0px 70px;
   width: 100%;
 }
 
