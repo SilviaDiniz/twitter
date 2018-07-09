@@ -1,4 +1,5 @@
 var postTwitter = document.querySelector('textarea');
+var form = document.querySelector('.form-twitter');
 
 postTwitter.addEventListener('keydown', autoSize);
 postTwitter.addEventListener('keydown', myBtn);
@@ -6,7 +7,7 @@ postTwitter.addEventListener('keypress', myBtn);
 postTwitter.addEventListener('keyup', myBtn);
 
 /* AUTO RECIZE */
-function autoSize() {
+function autoSize(){
   var size = this;
   setTimeout(function(){
     size.style = 'min-height: 60px, height: auto; padding: 0';
@@ -14,17 +15,12 @@ function autoSize() {
   },0);
 }
 
-/* RESSETA TEXTAREA */
-function resset() {
-    document.getElementsByClassName('form-twitter').reset();
-}
-
 /* EXIBE TEXT TWITTED */
 var submit = document.querySelector('input[type=submit]');
 var now = (new Date().getHours() + ':' + new Date().getMinutes());
 
 submit.onclick = function(event) {
-  var container = document.getElementsByClassName('post-twitted')[0];
+  var container = document.getElementsByClassName('box-twitted')[0];
 
   var section = document.createElement('div');
   var dateNow = document.createElement('small');
@@ -46,13 +42,13 @@ submit.onclick = function(event) {
   submit.disabled = true;
   submit.style.cursor = 'no-drop';
   submit.style.opacity = '0.3';
-  submit.addEventListener('click', resset);
+  form.reset();
 
   event.preventDefault();
 }
 
 /* CONTADOR */
-function counter(campo) {
+function counter(campo){
   var countChar = 140;
   var rest = document.getElementById('count-char').innerText = countChar-campo.value.length;
   if(rest >= 120 && rest < 140) {
