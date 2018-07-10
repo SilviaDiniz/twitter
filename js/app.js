@@ -51,12 +51,14 @@ submit.onclick = function(event) {
 function counter(campo){
   var countChar = 140;
   var rest = document.getElementById('count-char').innerText = countChar-campo.value.length;
-  if(rest >= 120 && rest < 140) {
-    document.getElementById('count-char').style.color = '#1BCCE0';
-  }else if(rest >= 130 && rest < 140) {
-    document.getElementById('count-char').style.color = '#1BB2E0';
+  if(rest >= 130 && rest < 140) {
+    document.getElementById('count-char').style.color = '#1B5FE0';
+  }else if(rest >= 120 && rest < 130) {
+    document.getElementById('count-char').style.color = '#FFFF00';
+  }else if(rest < 120 && rest >= 0) {
+    document.getElementById('count-char').style.color = '#FF8C00';
   }else if(rest < 0) {
-    document.getElementById('count-char').style.color = 'red';
+    document.getElementById('count-char').style.color = '#FF0000';
   }else {
     document.getElementById('count-char').style.color = '#1B5FE0';
   }
