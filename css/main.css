@@ -105,7 +105,7 @@ p.text{
   font-size: 18px;
   font-weight: 300;
   margin: 0;
-  #FFFFFF-space: pre-wrap;
+  white-space: pre-wrap;
 }
 
 hr{
