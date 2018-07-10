@@ -42,6 +42,8 @@ submit.onclick = function(event) {
   submit.disabled = true;
   submit.style.cursor = 'no-drop';
   submit.style.opacity = '0.3';
+  document.getElementById('count-char').textContent = 140;
+  document.getElementById('count-char').style.color = '#1B5FE0';
   form.reset();
 
   event.preventDefault();
