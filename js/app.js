@@ -21,7 +21,7 @@ var now = (new Date().getHours() + ':' + new Date().getMinutes());
 
 submit.onclick = function(event) {
   var container = document.getElementsByClassName('box-twitted')[0];
-
+  
   var section = document.createElement('div');
   var dateNow = document.createElement('small');
   var post = document.createElement('p');
@@ -66,13 +66,13 @@ function counter(campo){
 
 /* HABILITA DESABILITA BUTTON */
 function myBtn() {
-  if (postTwitter.value ==="" || postTwitter.value.length > 140 || !postTwitter.value.trim()) {
+  if (postTwitter.value === "" || postTwitter.value.length > 140 || !postTwitter.value.trim()) {
     submit.disabled = true;
     submit.style.opacity = "0.3";
     submit.style.cursor = "no-drop";
   } else {
     submit.disabled = false;
     submit.style.opacity = "1";
-    submit.style.cursor = "auto";
+    submit.style.cursor = "pointer";
   }
 }
