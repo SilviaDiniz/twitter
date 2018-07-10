@@ -21,7 +21,7 @@ var now = (new Date().getHours() + ':' + new Date().getMinutes());
 
 submit.onclick = function(event) {
   var container = document.getElementsByClassName('box-twitted')[0];
-  
+
   var section = document.createElement('div');
   var dateNow = document.createElement('small');
   var post = document.createElement('p');
@@ -42,9 +42,10 @@ submit.onclick = function(event) {
   submit.disabled = true;
   submit.style.cursor = 'no-drop';
   submit.style.opacity = '0.3';
+  form.reset();
+  postTwitter.removeAttribute("style");
   document.getElementById('count-char').textContent = 140;
   document.getElementById('count-char').style.color = '#1B5FE0';
-  form.reset();
 
   event.preventDefault();
 }
