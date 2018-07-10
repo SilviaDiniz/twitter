@@ -3,9 +3,10 @@
                      #666;
                      #DCDCDC;
                      #1B5FE0;
-                     #1BCCE0;
-                     #1BB2E0;
-                     WHITE;
+                     #FFFF00;
+                     #FF8C00;
+                     #FF0000;
+                     #FFFFFF;
  */
 
 /* CLASSES REUTILIZAVEIS */
@@ -49,12 +50,12 @@ div.banner{
 
 i.logo{
   font-size: 30px;
-  color: white;
+  color: #FFFFFF;
   letter-spacing: 10px;
 }
 
 h1.twitter{
-  color: white;
+  color: #FFFFFF;
   letter-spacing: 1px;
 }
 
@@ -89,7 +90,7 @@ div.container{
   padding: 25px;
   width: 550px;
   height: 250px;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
 h2.title{
@@ -104,6 +105,7 @@ p.text{
   font-size: 18px;
   font-weight: 300;
   margin: 0;
+  #FFFFFF-space: pre-wrap;
 }
 
 hr{
@@ -125,12 +127,12 @@ h3.sub-title{
 
 .form-twitter{
   width: 100%;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
 textarea{
   width: 100%;
-  height: 60px;
+  min-height: 60px;
   color: #666;
   font-size: 18px;
   font-weight: 300;
@@ -147,7 +149,7 @@ textarea{
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: white;
+  color: #FFFFFF;
   background-color: #1DA1F2;
   border-radius: 5px;
   border: none;
@@ -179,7 +181,8 @@ textarea{
   margin: 5px;
   max-width: 1200px;
   min-height: 50px;
-  background-color: white;
+  background-color: #FFFFFF;
+
 }
 
 .date{
